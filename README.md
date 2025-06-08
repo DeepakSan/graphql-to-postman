@@ -4,6 +4,8 @@
 
 -----
 
+Generate Postman collections from GraphQL endpoints with ease.
+
 ## Table of Contents
 
 - [Installation](#installation)
