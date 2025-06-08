@@ -40,9 +40,9 @@ create_postman_collection(
 
 ## Arguments
 
-URL (required): The GraphQL endpoint URL.
-depth (optional): The depth of the schema to explore (default: 2).
-output_file_name (optional): The name of the output Postman collection file (default: collection.json).
+- URL (required): The GraphQL endpoint URL.
+- depth (optional): The depth of the schema to explore (default: 2).
+- output_file_name (optional): The name of the output Postman collection file (default: collection.json).
 
 ## License
 
