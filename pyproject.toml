@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "graphql-to-postman"
 dynamic = ["version"]
-description = 'A Python package which converts a given graphql schema/URL to a postman collection'
+description = 'A Python package which converts a given graphql URL to a postman collection'
 readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"
@@ -17,7 +17,7 @@ maintainers = [
   {name = "Deepak Sanjay S J", email = "deepaksanjaysj@gmail.com"}
 ]
 classifiers = [
-  "Development Status :: 1 - Planning",
+  "Development Status :: 4 - Beta",
   "Framework :: Hatch",
   "License :: OSI Approved :: MIT License",
   "Topic :: Software Development :: Libraries :: Python Modules",

@@ -25,7 +25,8 @@ pip install graphql-to-postman
 Run the following command to generate a Postman collection via the command line:
 
 ```console
-graphql_to_postman <URL> [--depth <depth>] [--output <output_file_name>]
+graphql_to_postman <graphql_endpoint> [--depth <depth>] [--output <output_file_name>]
+graphql_to_postman https://countries.trevorblades.com --depth 2 --output_file_name "graphql_collections"
 ```
 
 Use the package programmatically in your Python code:
@@ -34,15 +35,15 @@ Use the package programmatically in your Python code:
 from graphql_to_postman.generate_collection import create_postman_collection
 
 create_postman_collection(
-    url="https://countries.trevorblades.com",
+    graphql_endpoint="https://countries.trevorblades.com",
     depth=2,
-    output_file_name="demo_output.json"
+    output_file_name="sample_output"
 )
 ```
 
 ## Arguments
 
-- URL (required): The GraphQL endpoint URL.
+- graphql_endpoint (required): The GraphQL endpoint URL.
 - depth (optional): The depth of the schema to explore (default: 2).
 - output_file_name (optional): The name of the output Postman collection file (default: collection.json).
 
