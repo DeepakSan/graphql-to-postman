@@ -3,6 +3,7 @@ import uuid
 
 from graphql_to_postman.helpers.helper import save_collection_to_file, introspect_schema, get_fields, build_query_item
 
+
 def create_postman_collection(graphql_endpoint, depth, output_file_name):
 
     introspection = introspect_schema(graphql_endpoint)

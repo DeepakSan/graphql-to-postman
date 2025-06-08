@@ -2,6 +2,7 @@ import argparse
 
 from graphql_to_postman.generate_collection import create_postman_collection
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("graphql_url", help="The url of the graphql schema")
