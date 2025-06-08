@@ -1,7 +1,6 @@
 import json
 import os
 import requests
-import urllib.parse
 
 
 def introspect_schema(endpoint_url, include_deprecation=None):
@@ -95,7 +94,7 @@ def build_query_item(types, query_fields, field_name, args, current_depth, parse
 
     fields_block = ""
     if return_type:
-        fields_block = build_fields_block(types, return_type, current_depth=0, max_depth=current_depth)
+        fields_block = build_fields_block(types, return_type, current_depth=1, max_depth=current_depth)
 
     query_text = f"query {field_name}Query {{\n  {field_name}{args_str} {{\n{fields_block}\n  }}\n}}"
     if not fields_block and return_type:

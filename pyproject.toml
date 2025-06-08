@@ -13,6 +13,9 @@ keywords = ["postman","graphql","graphql_to_postman"]
 authors = [
   { name = "Deepak Sanjay S J", email = "deepaksanjaysj@gmail.com" },
 ]
+maintainers = [
+  {name = "Deepak Sanjay S J", email = "deepaksanjaysj@gmail.com"}
+]
 classifiers = [
   "Development Status :: 1 - Planning",
   "Framework :: Hatch",
@@ -21,22 +24,24 @@ classifiers = [
   "Programming Language :: Python",
   "Programming Language :: Python :: 3.12",
 ]
-dependencies = ["argparse"]
+dependencies = ["argparse",
+                "requests"]
 
 [project.urls]
 Documentation = "https://github.com/DeepakSan/graphql-to-postman/blob/main/README.md"
 Issues = "https://github.com/DeepakSan/graphql-to-postman/issues"
 Source = "https://github.com/DeepakSan/graphql-to-postman"
 
+[project.scripts]
+graphql_to_postman = "graphql_to_postman.main:main"
+
 [tool.hatch.version]
 path = "src/graphql_to_postman/__about__.py"
 
-[tool.hatch.envs.types]
-extra-dependencies = [
-  "mypy>=1.0.0",
-]
-[tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/graphql_to_postman tests}"
+[tool.hatch.envs.dev]
+
+[tool.hatch.envs.dev.scripts]
+run = "python3 -m src.graphql_to_postman.main {args}"
 
 [tool.coverage.run]
 source_pkgs = ["graphql_to_postman", "tests"]
