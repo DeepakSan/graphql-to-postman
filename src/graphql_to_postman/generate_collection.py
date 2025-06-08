@@ -25,8 +25,8 @@ def create_postman_collection(graphql_endpoint, depth, output_file_name):
             collection["item"].append(
                 build_query_item(types, query_fields, field["name"], field.get("args", []), current_depth, parsed_url, graphql_endpoint)
             )
-
-    output_file_name = "graphql_postman_collection"
+    if not output_file_name:
+        output_file_name = "graphql_postman_collection"
     save_collection_to_file(collection, output_file_name + ".json")
 
 

@@ -35,6 +35,15 @@ Source = "https://github.com/DeepakSan/graphql-to-postman"
 [project.scripts]
 graphql_to_postman = "graphql_to_postman.main:main"
 
+[tool.hatch.envs.default]
+dependencies = [
+  "pytest",
+  "pytest-cov"
+]
+
+[tool.hatch.envs.default.scripts]
+test = "pytest --cov=graphql_to_postman"
+
 [tool.hatch.version]
 path = "src/graphql_to_postman/__about__.py"
 
